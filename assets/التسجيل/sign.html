@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     
+
+
+      body{
+        
+         display: flex;
+         justify-content: center;
+         background-color: #252525;
+         padding-top: 150px;
+         color: white;
+      }
+      .form-container{
+         display: flex;
+         flex-direction: column;
+         border: 2px solid rgb(161, 160, 160);
+         border-radius: 5%;
+         width: 400px;
+         padding: 50px;
+      }
+      form{
+         display: flex;
+         flex-direction: column;
+         padding: 10px;
+      }
+      h2{
+         text-align: center;
+         
+      }
+      label{
+         text-align: right;
+         margin-top: 3px;
+         margin-bottom: 3px;
+      }
+      input{
+         border: 1px solid gray;
+         border-radius: 3px;
+         padding: 5px;
+      }
+      button{
+         margin-top: 8px;
+         background-color: #4caf50;
+         border: 1px rgb(26, 26, 26);
+         padding: 6px;
+         width: 100px;
+         border-radius: 5px;
+         cursor: pointer;
+         font-size: 16px;
+         color: aliceblue;
+         
+         
+      }
+      .bnts{
+         
+         margin-left: 100px;
+      }
+      button:hover{
+         background-color:rgb(54, 95, 54) ;
+      }
+      a{
+         color: #75fb79;
+         font-size: 14px;
+         text-align: end;
+         cursor: pointer;
+      }
+      a:hover{
+         color: rgb(54, 95, 54);
+      }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+   <h2>تسجل حساب جديد</h2>
+   <form>
+      <label for="name">الاسم كامل</label>
+      <input type="text" id="name" required>
+      <label for="email">البريد الالكترونى</label>
+      <input type="email" id="email" required>
+      <label for="password" >كلمه السر</label>
+      <input type="password" id="password" required>
+      <label for="confirm-password">تاكيد كلمه السر</label>
+      <input type="password" id="confirm-password">
+      <div class="btns">
+        <button type="submit">الغاء</button>
+        <button type="submit">تسجيل</button>
+      </div>
+   </form>
+   <a href="./new.html">امتلك حساب بالفعل-تسجيل الدخول</a>
+   <a href="./forget-password"></a>
+   
+</div>
+
+</body>
+</html>
