@@ -17,14 +17,15 @@ body {
 header {
   background-color: #252525;
   text-align: center;
-  padding-top: 20px;
   width: 100%;
   position: fixed;
   z-index: 999;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 200px;
+  padding: 10px 5%;
+  box-sizing: border-box;
 }
 .logo {
   text-decoration: none;
@@ -34,15 +35,17 @@ header {
   font-size: 1.5em;
 }
 .navigation {
-  margin-right: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .navigation a {
   text-decoration: none;
-  margin-left: 60px;
-
+  margin-left: 20px;
   color: white;
-  font-size: 1, 1em;
+  font-size: 1.1em;
   font-weight: 500;
+  white-space: nowrap;
 }
 .navigation a:hover {
   background-color: #4caf50;
@@ -66,17 +69,19 @@ header {
   padding-left: 15px;
   padding-right: 15px;
   padding-bottom: 20px;
-  margin-left: 550px;
 }
 .content h2 {
   font-size: 30px;
   margin-bottom: 20px;
   color: #4caf50;
-  margin-right: 600px;
 }
 .Courses {
   margin-top: 10px;
   margin-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 .Course-card h3 {
   color: #4caf50;
@@ -93,6 +98,7 @@ header {
   padding-bottom: 20px;
   box-shadow: 0 4px 6px Irgba(0, 0, 0, 0.1);
   width: 300px;
+  max-width: 90vw;
   text-align: center;
   margin-top: 15px;
   margin-bottom: 15px;
@@ -137,8 +143,10 @@ header {
   text-align: center;
   background-color: #252525;
   padding-top: 22px;
+  padding-left: 15px;
+  padding-right: 15px;
   color: white;
-  font-size: 1, 4em;
+  font-size: 1.4em;
   font-weight: 500;
   border-radius: 0 0 30px 30px;
 }
@@ -157,21 +165,24 @@ header {
   margin-top: 10px;
   margin-bottom: 30px;
 }
+#home {
+  text-align: center;
+}
 #home .main_button {
   color: white;
-  margin-left: 200px;
   text-decoration: none;
-  font-size: 1, 1em;
+  font-size: 1.1em;
   font-weight: 600;
   display: inline-block;
   letter-spacing: 1px;
   border-radius: 5px;
   margin-top: 20px;
+  padding: 10px 20px;
 }
 #home p {
   margin-top: 25px;
-  margin-left: 200px;
   font-size: 25px;
+  padding: 0 15px;
 }
 .main_button {
   border: solid 10px #4caf50;
@@ -197,7 +208,9 @@ header {
 }
 .container .wrapper {
   width: 450px;
-  height: 363px;
+  max-width: 92vw;
+  aspect-ratio: 450 / 363;
+  height: auto;
   box-shadow: 10px 10px 20px black;
   margin: 5rem auto;
   overflow: hidden;
@@ -212,7 +225,9 @@ header {
 }
 .container .wrapper1 {
   width: 546.5px;
-  height: 365px;
+  max-width: 92vw;
+  aspect-ratio: 546.5 / 365;
+  height: auto;
   box-shadow: 10px 10px 20px black;
   margin: 5rem auto;
   overflow: hidden;
@@ -391,11 +406,12 @@ footer a {
   color: lightgray;
   text-decoration: none;
 }
-.footer-coulumn {
+.footer-column {
   width: 25%;
+  min-width: 140px;
 }
-.footer-coulumn h4 {
-  font-size: 1, 25rem;
+.footer-column h4 {
+  font-size: 1.25rem;
   color: whitesmoke;
   text-transform: uppercase;
 }
@@ -403,4 +419,66 @@ footer img {
   width: 100px;
   height: 100px;
   border-radius: 2px;
+}
+
+/* ===== Responsive fixes for tablets & phones ===== */
+@media (max-width: 768px) {
+  header {
+    padding: 10px 4%;
+  }
+  .logo {
+    font-size: 1.2em;
+  }
+  .navigation a {
+    margin-left: 12px;
+    font-size: 0.95em;
+  }
+  #home {
+    padding-top: 90px;
+  }
+  #home h3 {
+    font-size: 1.4em;
+  }
+  #home p {
+    font-size: 18px;
+  }
+  .content h2 {
+    font-size: 24px;
+  }
+  .Course-card {
+    width: 100%;
+    max-width: 340px;
+  }
+  .footer-column {
+    width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    justify-content: center;
+    gap: 10px;
+  }
+  .navigation {
+    width: 100%;
+  }
+  .navigation a {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  #home {
+    padding-top: 120px;
+  }
+  #home h2 {
+    font-size: 1.1em;
+  }
+  footer .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .footer-column {
+    width: 100%;
+    text-align: center;
+  }
 }
